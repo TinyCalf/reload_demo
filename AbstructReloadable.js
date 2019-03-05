@@ -8,6 +8,8 @@ module.exports = class AbstructReloadable {
         let SelfClass = require(this.filename)
         let newInstance = new SelfClass()
         for (var s in this) {
+            if (this[s] instanceof Function)
+                continue;
             newInstance[s] = this[s]
         }
         return newInstance
