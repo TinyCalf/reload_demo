@@ -9,5 +9,6 @@ setInterval(() => {
     console.log(a.a)
     a.a++;
     a.func("hello")
+    a.b.func("hello")
 }, 1000)
 

@@ -1,15 +1,16 @@
 const AbstructReloadable = require("./AbstructReloadable")
+const B = require("./B")
+
 class A extends AbstructReloadable {
     constructor() {
         super(__filename);
         this.a = 0
-        this.b = 1
+        this.b = new B();
     }
 
     func(str) {
         console.log("i am function:", str);
     }
-
 }
 
 let support = Class => {
